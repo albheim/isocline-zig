@@ -1,6 +1,7 @@
 .{
     .name = "isocline-zig",
     .version = "1.0.9",
+    .minimum_zig_version = "0.13.0",
     .dependencies = .{},
     .paths = .{
         "src",

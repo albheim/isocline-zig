@@ -80,7 +80,7 @@ pub fn styleClose() void {
 /// Use a null filename to not persist the history.
 /// Use -1 for max_entries to get the default (200).
 /// The last returned input from ic_readline() is automatically added to the history.
-pub fn setHistory(fname: [*:0]const u8, max_entries: c_long) void {
+pub fn setHistory(fname: ?[*:0]const u8, max_entries: c_long) void {
     ic_set_history(fname, max_entries);
 }
 
