@@ -2,11 +2,18 @@ This is a fork of [isocline](https://github.com/daanx/isocline) based on commit
 [c9310ae](https://github.com/daanx/isocline/tree/c9310ae58941559d761fe5d2dd2713d245f18da6)
 packaged for Zig.
 
+`zig fetch --save git+https://github.com/ratakor/isocline-zig`
+```zig
+const isocline = b.dependency("isocline-zig", .{}).module("isocline");
+const exe = b.addExecutable(...);
+exe.root_module.addImport("isocline", isocline);
+```
+
 ---
 
-<!-- <img align="right" width="350px" src="doc/completion-macos.png"/> -->
+<!-- <img align="right" width="350px" src="https://github.com/daanx/isocline/blob/main/doc/completion-macos.png"/> -->
 
-<img align="left" src="doc/isocline-inline.svg"/>
+<img align="left" src="https://github.com/daanx/isocline/blob/main/doc/isocline-inline.svg"/>
 
 # Isocline: a portable readline alternative.
  
@@ -29,11 +36,11 @@ Isocline is a pure C library that can be used as an alternative to the GNU readl
 Enjoy,
   Daan
   
-<!--  <img align="right" width="350px" src="doc/history-win.png"/> -->
+<!--  <img align="right" width="350px" src="https://github.com/daanx/isocline/blob/main/doc/history-win.png"/> -->
   
 # Demo
 
-![recording](doc/record-macos.svg)  
+![recording](https://github.com/daanx/isocline/blob/main/doc/record-macos.svg)  
 
 Shows in order: unicode, syntax highlighting, brace matching, jump to matching brace, auto indent, multiline editing, 24-bit colors, inline hinting, filename completion, and incremental history search.  
 <sub>(screen capture was made with [termtosvg] by Nicolas Bedos)</sub>
@@ -350,12 +357,12 @@ is not always possible to do automatically and you can
 set the `COLORTERM` environment variable expicitly to force Isocline to use
 a specific palette:
 - `COLORTERM=truecolor`: use 24-bit colors.  
-  <img width="500px" src="doc/color/ansi-truecolor.png"/>
+  <img width="500px" src="https://github.com/daanx/isocline/blob/main/doc/color/ansi-truecolor.png"/>
 - `COLORTERM=256color`: use the ANSI 256 color palette.  
-  <img width="500px" src="doc/color/ansi-256color.png"/>
+  <img width="500px" src="https://github.com/daanx/isocline/blob/main/doc/color/ansi-256color.png"/>
 - `COLORTERM=16color` : use the regular ANSI 16 color 
    palette (8 normal and 8 bright colors).  
-   <img width="500px" src="doc/color/ansi-16color.png"/>
+   <img width="500px" src="https://github.com/daanx/isocline/blob/main/doc/color/ansi-16color.png"/>
 - `COLORTERM=8color`: use bold for bright colors.
 - `COLORTERM=monochrome`: use no color.
 
@@ -421,7 +428,7 @@ and finally, we can first translate into a perceptually uniform color space
 algorithm (_ciede2000_). Here are these three methods compared on
 some colors: 
 
-![color space comparison](doc/color/colorspace-map.png)
+![color space comparison](https://github.com/daanx/isocline/blob/main/doc/color/colorspace-map.png)
 
 Each top row is the true 24-bit RGB color. Surprisingly,
 the sophisticated CIEDE2000 distance seems less good here compared to the 

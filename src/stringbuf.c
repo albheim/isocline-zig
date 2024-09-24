@@ -148,8 +148,9 @@ ic_private ssize_t str_take_while_fit( const char* s, ssize_t max_width) {
 
 // get offset of the previous codepoint. does not skip back over CSI sequences.
 ic_private ssize_t str_prev_ofs( const char* s, ssize_t pos, ssize_t* width ) {
+  if (pos <= 0) return 0;
   ssize_t ofs = 0;
-  if (s != NULL && pos > 0) {
+  if (s != NULL) {
     ofs = 1;
     while (pos > ofs) {
       uint8_t u = (uint8_t)s[pos - ofs];
@@ -679,8 +680,9 @@ ic_private ssize_t sbuf_insert_at_n(stringbuf_t* sbuf, const char* s, ssize_t n,
 }
 
 ic_private stringbuf_t* sbuf_split_at( stringbuf_t* sb, ssize_t pos ) {
+  if (pos < 0) return NULL;
   stringbuf_t* res = sbuf_new(sb->mem);
-  if (res==NULL || pos < 0) return NULL;
+  if (res==NULL) return NULL;
   if (pos < sb->count) {
     sbuf_append_n(res, sb->buf + pos, sb->count - pos);
     sb->count = pos;
