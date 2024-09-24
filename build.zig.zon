@@ -1,0 +1,12 @@
+.{
+    .name = "isocline-zig",
+    .version = "1.0.9",
+    .dependencies = {},
+    .paths = .{
+        "src",
+        "isocline.zig",
+        "build.zig",
+        "build.zig.zon",
+        "LICENSE",
+    },
+}
