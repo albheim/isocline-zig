@@ -1,5 +1,5 @@
 //! Bindings for isocline
-//! See https://github.com/daanx/isocline/blob/main/include/isocline.h
+//! See isocline.h
 
 const std = @import("std");
 
