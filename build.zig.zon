@@ -1,7 +1,8 @@
 .{
-    .name = "isocline-zig",
-    .version = "1.0.9",
-    .minimum_zig_version = "0.13.0",
+    .name = .isocline,
+    .version = "1.0.10",
+    .minimum_zig_version = "0.14.0",
+    .fingerprint = 0xa06675b7a8b9ebab,
     .dependencies = .{},
     .paths = .{
         "src",
